@@ -1,0 +1,492 @@
+
+:root{
+  --primary-background-color: #373737;
+  --button-background-color: #256e9f;
+  --primary-text-color: #fff;
+  --second-text-color: #adadad;
+  --active-use-color: #18c9f1;
+  --chat-background-color: #2f3338;
+  --input-background-color: #d9d9d9;
+  --input-background-color: #373737;
+  --input-border-color: #3e81ab;
+}
+
+:is(input[type='text'], input[type='password'], input[type='text'], input[type='email']){
+  background-color: var(--input-background-color);
+  color: var(--primary-text-color);
+  height: 45px;
+  width: calc(100% - 58px);
+  font-size: 17px;
+  border: 0;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  padding: 0 13px;
+  border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+  -ms-border-radius: 5px 0 0 0;
+  -o-border-radius: 5px 0 0 0;
+  outline: none;
+  transition: border-color 0.2s ease;
+    -webkit-transition: border-color 0.2s ease;
+    -moz-transition: border-color 0.2s ease;
+    -ms-transition: border-color 0.2s ease;
+    -o-transition: border-color 0.2s ease;
+}
+
+:is(input[type='text'], input[type='password'], input[type='email']):focus{
+  border-bottom: 1px solid var(--input-border-color);
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #4e4e4e;
+}
+
+main{
+  background-color: #373737;
+  color: #fff;
+  width: 500px;
+  border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+  box-shadow: 0 0 128px 0 rgba(0, 0, 0, .1);
+}
+
+main.more-width{
+  width: 1000px;
+}
+
+/* Sign up Form CSS Code */
+.form{
+  padding: 25px 30px;
+  padding-bottom: 15px;
+}
+
+.form header{
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.form form{
+  margin: 20px 0;
+}
+
+.more-margin{
+  margin-top: 30px;
+}
+
+.form form .error-txt{
+  display: none;
+  color: #81000d;
+  background-color: #f9c6ca;
+  padding: 8px 10px;
+  text-align: center;
+  border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  margin-bottom: 25px;
+  border: 1px solid #f8364a;
+}
+
+.form form .field{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form form .name-details{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.form form .field label{
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.form form .field i{
+  color: #6c6c6c;
+  position: absolute;
+  right: 13px;
+  top: 45px;
+  transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+  cursor: pointer; 
+}
+
+.form form .field i.active::before{
+  color: var(--button-background-color);
+  content:  "\f070";
+}
+
+.form form .input input{
+  height: 40px;
+  width: 100%;
+  font-size: 16px;
+  padding: 0 10px;
+}
+
+.form form .image input{
+  margin-top: 10px;
+  background-color: inherit;
+  font-size: 17px;
+}
+
+.form form .button input{
+  display: inline-block;
+  text-align: center;
+  margin-top: 13px;
+  height: 45px;
+  border: none;
+  font-size: 17px;
+  font-weight: 400;
+  background-color: var(--button-background-color);
+  color: var(--primary-text-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form .link{
+  text-align: center;
+  margin-top: 25px;
+  font-size: 17px;
+}
+
+.form .link a{
+  color: rgb(163, 200, 237);
+}
+
+/* Users Area CSS Code */
+.users{
+  padding: 25px 45px;
+}
+
+.users header,
+.users-list a{
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  justify-content: space-between;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+main img{
+  object-fit: cover;
+  border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+:is(.users, .users-list) .content{
+  display: flex;
+  align-items: center;
+}
+
+.users header .content img{
+  height: 50px;
+  width: 50px;
+}
+
+:is(.users, .users-list) .details{
+  color: var(--primary-text-color);
+  margin-left: 15px
+}
+
+:is(.users, .users-list) .details span{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+:is(.users, .users-list) .details p{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.users-list .details p{
+  width: 40vw;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.users header .logout{
+  color: var(--primary-text-color);
+  background-color: var(--button-background-color);
+  padding: 7px 15px;
+  border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.users .search{
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+}
+
+.users .search .text{
+  font-size: 18px;
+}
+
+.users .search input{
+  position: absolute;
+  height: 42px;
+  width: calc(100% - 50px);
+  /* border: 1px solid var(--button-background-color); */
+  border: 1px solid var(--input-border-color);
+  padding: 0 13px;
+  font-size: 16px;
+  border-radius: 5px 0 0 5px;
+  -webkit-border-radius: 5px 0 0 5px;
+  -moz-border-radius: 5px 0 0 5px;
+  -ms-border-radius: 5px 0 0 5px;
+  -o-border-radius: 5px 0 0 5px;
+  outline: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.users .search input.active{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.users .search button{
+  width: 47px;
+  height: 42px;
+  border: none;
+  outline: none;
+  color: var(--primary-text-color);
+  background-color: inherit;
+  border-radius: 0 5px 5px 0;
+    -webkit-border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
+    -ms-border-radius: 0 5px 5px 0;
+    -o-border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+
+.users .search button.active{
+  background-color: var(--button-background-color);
+}
+
+.users .search button i{
+  font-size: 17px;
+}
+
+.users .search button.active i::before{
+  content: "\f00d";
+  font-size: 18px;
+}
+
+.users-list{
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+:is(.users-list, .chat-box)::-webkit-scrollbar{
+  width: 0;
+}
+
+.users-list a{
+  margin-bottom: 15px;
+  page-break-after: 10px;
+  padding-right: 15px;
+  border-bottom-color: #595959;
+}
+
+.users-list a .content img{
+  height: 40px;
+  width: 40px;
+}
+
+.users-list a .content p{
+  color:#b8b8b8;
+}
+
+.users-list a .status-dot{
+  font-size: 12px;
+  color: var(--active-use-color);
+}
+
+.users-list a .status-dot.offline{
+  color: var(--second-text-color);
+}
+
+/* Chat Area CSS code */
+.chat-area header{
+  display: flex;
+  align-items: center;
+  padding: 18px 30px;
+}
+
+.chat-area header .back-icon{
+  font-size: 18px;
+  color: var(--button-background-color);
+}
+
+.chat-area header img{
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  margin: 0 15px;
+}
+
+.chat-area header span{
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.chat-box{
+  height: 500px;
+  overflow-y: auto;
+  background-color: var(--chat-background-color);
+  padding: 10px 30px 20px 30px;
+  box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%),
+              inset 0 -32px 32px -32px  rgb(0 0 0 / 5%,);
+}
+
+.chat-box .chat{
+  margin: 25px 0;
+}
+
+.chat-box .chat p{
+  word-wrap: break-word;
+  padding: 8px 16px;
+  box-shadow: 0px 0px 10px 0px rgba(7, 35, 80, 0.394);
+}
+
+.chat-box .outgoing{
+  display: flex;
+}
+
+.outgoing .details{
+  margin-left: auto;
+  max-width: calc(100% - 130px);
+}
+
+.outgoing .details p{
+  background-color: rgb(54, 75, 98);
+  border-radius: 18px 18px 0 18px;
+    -webkit-border-radius: 18px 18px 0 18px;
+    -moz-border-radius: 18px 18px 0 18px;
+    -ms-border-radius: 18px 18px 0 18px;
+    -o-border-radius: 18px 18px 0 18px;
+}
+
+.chat-box .incoming{
+  display: flex;
+  align-items: flex-end;
+}
+
+.chat-box .incoming img{
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+.incoming .details{
+  margin-left: 10px;
+  margin-right: auto;
+  max-width: calc(100% - 130px);
+}
+
+.incoming .details p{
+  background-color: rgb(216, 236, 255);
+  color: black;
+  border-radius: 18px 18px 18px 0;
+    -webkit-border-radius: 18px 18px 18px 0;
+    -moz-border-radius: 18px 18px 18px 0;
+    -ms-border-radius: 18px 18px 18px 0;
+    -o-border-radius: 18px 18px 18px 0;
+}
+
+.chat-area .typing-area{
+  padding: 18px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.typing-area input{
+  color: var(--primary-text-color);
+  height: 45px;
+  width: calc(100% - 58px);
+  font-size: 17px;
+  border: 0;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  padding: 0 13px;
+  border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+  -ms-border-radius: 5px 0 0 0;
+  -o-border-radius: 5px 0 0 0;
+  outline: none;
+  transition: border-color 0.2s ease;
+    -webkit-transition: border-color 0.2s ease;
+    -moz-transition: border-color 0.2s ease;
+    -ms-transition: border-color 0.2s ease;
+    -o-transition: border-color 0.2s ease;
+}
+
+.typing-area input:focus{
+  border-bottom: 1px solid var(--input-border-color);
+}
+
+.typing-area button{
+  width: 55px;
+  border: none;
+  outline: none;
+  background-color: var(--button-background-color);
+  cursor: pointer;
+  font-size: 22px;
+  border-radius: 0 5px 5px 0;
+    -webkit-border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
+    -ms-border-radius: 0 5px 5px 0;
+    -o-border-radius: 0 5px 5px 0;
+}
+
+.typing-area button i{
+  color: var(--primary-background-color);
+}

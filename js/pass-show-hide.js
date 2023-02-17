@@ -1,0 +1,13 @@
+const passField = document.querySelector('.form input[type="password"]');
+
+let toggleBtn = document.querySelector('.form .field i');
+
+toggleBtn.addEventListener('click', () => {
+  if(passField.type === 'password'){
+    passField.type = 'text';
+    toggleBtn.classList.add('active');
+  }else{
+    passField.type = 'password';
+    toggleBtn.classList.remove('active');
+  }
+})
